@@ -1,0 +1,26 @@
+/* BASICS */
+@import 'basics';
+
+/* MAIN */
+@import 'main';
+
+html {
+    overflow-y: scroll;
+    scrollbar-arrow-color: yellow;
+}
+
+body {
+    padding: 0 !important;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    background-color: @white !important;
+    min-height: 100vh;
+    height: auto !important;
+
+    #app {
+        width: 85%;
+    }
+}

@@ -1,0 +1,72 @@
+.content {
+    width: 100%;
+    min-height: 100vh;
+
+    .title {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1 {
+            font-family: @roboto;
+            font-size: 23px;
+            margin: 0;
+        }
+    }
+
+    .store {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .filter {
+            width: 20%;
+            min-height: 100vh;
+            background-color: purple;
+        }
+
+        .shoes {
+            width: 80%;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-left: 5px;
+
+            .shoes-elem {
+                width: 415px;
+                margin-bottom: 60px;
+
+                img {
+                    width: 400px;
+                    height: 400px;
+                }
+
+                .elem-infos {
+                    p {
+                        color: rgb(17, 17, 17);
+                        margin: 0;
+                        font-family: @roboto;
+
+                        &.elem-name, &.elem-prix {
+                            font-weight: 500;
+                        }
+
+                        &.elem-sexe, &.elem-couleur {
+                            color: rgb(117, 117, 117);
+                        }
+
+                        &.elem-prix {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

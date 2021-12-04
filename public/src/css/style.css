@@ -1,0 +1,84 @@
+/* BASICS */
+/* FONTS */
+/* COLORS */
+/* RESPONSIVE */
+/* MAIN */
+.content {
+  width: 100%;
+  min-height: 100vh;
+}
+.content .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content .title h1 {
+  font-family: 'roboto', sans-serif;
+  font-size: 23px;
+  margin: 0;
+}
+.content .store {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content .store .filter {
+  width: 20%;
+  min-height: 100vh;
+  background-color: purple;
+}
+.content .store .shoes {
+  width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+.content .store .shoes .shoes-elem {
+  width: 415px;
+  margin-bottom: 60px;
+}
+.content .store .shoes .shoes-elem img {
+  width: 400px;
+  height: 400px;
+}
+.content .store .shoes .shoes-elem .elem-infos p {
+  color: #111111;
+  margin: 0;
+  font-family: 'roboto', sans-serif;
+}
+.content .store .shoes .shoes-elem .elem-infos p.elem-name,
+.content .store .shoes .shoes-elem .elem-infos p.elem-prix {
+  font-weight: 500;
+}
+.content .store .shoes .shoes-elem .elem-infos p.elem-sexe,
+.content .store .shoes .shoes-elem .elem-infos p.elem-couleur {
+  color: #757575;
+}
+.content .store .shoes .shoes-elem .elem-infos p.elem-prix {
+  margin-top: 15px;
+}
+html {
+  overflow-y: scroll;
+  scrollbar-arrow-color: yellow;
+}
+body {
+  padding: 0 !important;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background-color: #fff !important;
+  min-height: 100vh;
+  height: auto !important;
+}
+body #app {
+  width: 85%;
+}
