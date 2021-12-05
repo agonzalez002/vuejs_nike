@@ -9,15 +9,261 @@
 }
 .content .title {
   width: 100%;
-  height: 50px;
+  height: auto;
+  min-height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .content .title {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 }
 .content .title h1 {
   font-family: 'roboto', sans-serif;
   font-size: 23px;
   margin: 0;
+}
+.content .title i {
+  display: none;
+}
+.content .title i:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .content .title i {
+    display: block;
+    font-size: 23px;
+  }
+}
+.content .mobile-menu {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: none;
+  display: none;
+}
+.content .mobile-menu.show {
+  display: block;
+}
+.content .mobile-menu i {
+  font-size: 35px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+}
+.content .mobile-menu i:hover {
+  cursor: pointer;
+}
+.content .mobile-menu .filter {
+  width: auto;
+}
+.content .mobile-menu .filter .filter-elem {
+  width: auto;
+  border-top: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.content .mobile-menu .filter .filter-elem::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 9%;
+  width: 80%;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+.content .mobile-menu .filter .filter-elem .top i {
+  display: none;
+}
+.content .mobile-menu .filter .filter-elem .bottom {
+  display: flex;
+}
+.content .mobile-menu .filter .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.content .mobile-menu .filter .btns a {
+  text-decoration: none;
+  font-family: 'roboto', sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 25px;
+}
+.content .mobile-menu .filter .btns a.remove_filter {
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  color: #000;
+  margin-right: 15px;
+}
+.content .filter {
+  width: 250px;
+  min-height: 100vh;
+  font-family: 'roboto', sans-serif;
+  font-size: 15px;
+}
+@media screen and (max-width: 999px) {
+  .content .filter {
+    width: 200px;
+  }
+}
+.content .filter .filter-elem {
+  border-top: 1px solid #c4c4c4;
+  width: auto;
+  padding-top: 10px;
+}
+.content .filter .filter-elem.show .top .fa-chevron-down {
+  display: none;
+}
+.content .filter .filter-elem.show .top .fa-chevron-up {
+  display: block;
+}
+.content .filter .filter-elem.show .bottom {
+  display: flex;
+}
+.content .filter .filter-elem .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.content .filter .filter-elem .top:hover {
+  cursor: pointer;
+}
+.content .filter .filter-elem .top i {
+  font-size: 15px;
+}
+.content .filter .filter-elem .top i.fa-chevron-up {
+  display: none;
+}
+.content .filter .filter-elem .top i.fa-chevron-down {
+  display: block;
+}
+.content .filter .filter-elem .bottom {
+  padding-bottom: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.content .filter .filter-elem .bottom.couleur {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content .filter .filter-elem .bottom.disabled {
+  display: none;
+}
+.content .filter .filter-elem .bottom .custom_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.content .filter .filter-elem .bottom .custom_input::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  bottom: 4px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.content .filter .filter-elem .bottom input[type=checkbox] {
+  visibility: hidden;
+  display: none;
+}
+.content .filter .filter-elem .bottom input[type=checkbox]:checked + .custom_input {
+  background-color: #000;
+}
+.content .filter .filter-elem .bottom input[type=checkbox]:checked + .custom_input::after {
+  display: block;
+}
+.content .filter .filter-elem .bottom input[type=checkbox]:checked ~ label .custom_input::after {
+  display: block;
+}
+.content .filter .filter-elem .bottom .each-color {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75px;
+  margin-bottom: 20px;
+}
+.content .filter .filter-elem .bottom .each-color:hover {
+  cursor: pointer;
+}
+.content .filter .filter-elem .bottom .each-color:hover .custom_input {
+  background-color: #757575;
+}
+.content .filter .filter-elem .bottom .each-color:hover .custom_input::after {
+  display: block;
+}
+.content .filter .filter-elem .bottom .each-color .custom_input {
+  position: relative;
+}
+.content .filter .filter-elem .bottom .each-color .custom_input.couleur {
+  display: block;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.content .filter .filter-elem .bottom .each-color .custom_input.Blanc::after,
+.content .filter .filter-elem .bottom .each-color .custom_input.Jaune::after {
+  border-color: #000;
+}
+.content .filter .filter-elem .bottom .each-color .custom_input::after {
+  left: 11px;
+  bottom: 8px;
+  width: 7px;
+  height: 16px;
+  border-color: #fff;
+}
+.content .filter .filter-elem .bottom .label {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.content .filter .filter-elem .bottom .label.couleur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  margin-right: 5px;
+  padding-left: 0;
+}
+.content .filter .filter-elem .bottom .label:hover .custom_input {
+  background-color: #757575;
+}
+.content .filter .filter-elem .bottom .label:hover .custom_input::after {
+  display: block;
 }
 .content .store {
   width: 100%;
@@ -26,27 +272,95 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.content .store .filter {
-  width: 20%;
-  min-height: 100vh;
-  background-color: purple;
+.content .store.show {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .content .store .filter {
+    display: none;
+  }
 }
 .content .store .shoes {
   width: 80%;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-left: 5px;
+}
+@media screen and (max-width: 1499px) {
+  .content .store .shoes {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 1299px) {
+  .content .store .shoes {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content .store .shoes {
+    justify-content: space-between;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 355px) {
+  .content .store .shoes {
+    justify-content: center;
+  }
 }
 .content .store .shoes .shoes-elem {
   width: 415px;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 768px) {
+  .content .store .shoes .shoes-elem {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .content .store .shoes .shoes-elem {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .content .store .shoes .shoes-elem {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 355px) {
+  .content .store .shoes .shoes-elem {
+    width: 100%;
+  }
+}
 .content .store .shoes .shoes-elem img {
   width: 400px;
   height: 400px;
+}
+@media screen and (max-width: 768px) {
+  .content .store .shoes .shoes-elem img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .content .store .shoes .shoes-elem img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 499px) {
+  .content .store .shoes .shoes-elem img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 355px) {
+  .content .store .shoes .shoes-elem img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .content .store .shoes .shoes-elem .elem-infos p {
   color: #111111;
